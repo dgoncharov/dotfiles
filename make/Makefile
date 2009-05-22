@@ -1,20 +1,23 @@
-CXX = g++
+# A makefile template which compiles all cpp files in the current directory
+# and makes gcc generate dependency files.
+
+cxx = g++
 CXXFLAGS = -pipe -Wall -I.
 LDFLAGS =
 
-SRC = *.cpp
-OBJ = $(patsubst %.cpp, %.o, $(wildcard $(SRC)))
-TARGET = dp
+src = *.cpp
+obj = $(patsubst %.cpp, %.o, $(wildcard $(src)))
+target = dp
 
-all: $(OBJ)
-	$(CXX) -o $(TARGET) $(OBJ)
+all: $(obj)
+	$(cxx) -o $(target) $(obj)
 
 %.o: %.cpp
-	$(CXX) -c -MD -MF $(patsubst %.o, %.d, $@) \
+	$(cxx) -c -MD -MF $(patsubst %.o, %.d, $@) \
 	$(CXXFLAGS) -o $@ $<
 
--include $(SRC:.cpp=.d)
+-include $(src:.cpp=.d)
 
 clean:
-	rm -f *.o *.a *.so *.gch *.d $(TARGET)
+	rm -f *.o *.a *.so *.gch *.d $(target)
 
