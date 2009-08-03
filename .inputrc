@@ -9,7 +9,7 @@ set visible-stats on
 $if Bash
 
 # Bind grep substring in all files to F3
-"\eOR": "\C-agrep -nr \"\C-e\" *"
+"\eOR": "\C-agrep -nir \"\C-e\" *"
 
 # Bind grep substring in C/C++ files to F4
 "\eOS": "\C-agrep -nr --include=*.{c,h,cc,hh,icc,tcc,hxx,cpp,hpp} \"\C-e\" *"
