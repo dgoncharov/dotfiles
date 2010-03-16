@@ -19,6 +19,7 @@ export GTK_USE_XFT=1
 export EDITOR=/usr/bin/vim
 export GREP_COLOR=35
 export BLOCK_SIZE=human-readable
+export LESS=-rf
 export LESSCHARSET=utf-8
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/wss/lib/pkgconfig
 export PALUDIS_OPTIONS="--log-level warning --dl-reinstall-scm weekly --show-reasons summary"
