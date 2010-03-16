@@ -12,7 +12,7 @@ $if Bash
 "\eOR": "\C-agrep -nir \"\C-e\" *"
 
 # Bind grep substring in C/C++ files to F4
-"\eOS": "\C-agrep -nr --include=*.{c,h,cc,hh,icc,tcc,hxx,cpp,hpp} \"\C-e\" *"
+"\eOS": "\C-agrep -nr --include=*.{c,h,cc,hh,icc,tcc,hxx,cpp,hpp,py,ac,am,inl} \"\C-e\" *"
 
 # Bind grep substring in list of running processes to F7
 "\e[18~": "\C-aps ax | grep -v grep | grep "\C-e\"\n"
