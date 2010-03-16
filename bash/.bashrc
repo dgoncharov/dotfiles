@@ -24,6 +24,19 @@ export LESSCHARSET=utf-8
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/wss/lib/pkgconfig
 export PALUDIS_OPTIONS="--log-level warning --dl-reinstall-scm weekly --show-reasons summary"
 export RECONCILIO_OPTIONS="--log-level warning"
+export LC_CTYPE='ru_RU.UTF-8'
+export LC_NUMERIC='POSIX'
+export LC_TIME='en_US.UTF-8'
+export LC_COLLATE='ru_RU.UTF-8'
+export LC_MONETARY='ru_RU.UTF-8'
+export LC_MESSAGES='en_US.UTF-8'
+export LC_PAPER='ru_RU.UTF-8'
+export LC_NAME='ru_RU.UTF-8'
+export LC_ADDRESS='ru_RU.UTF-8'
+export LC_TELEPHONE='ru_RU.UTF-8'
+export LC_MEASUREMENT='ru_RU.UTF-8'
+export LC_IDENTIFICATION='ru_RU.UTF-8'
+export LANG='en_US.UTF-8'
 
 alias du0='du -h --max-depth=0 -P'
 alias du1='du -h --max-depth=1 -P'
