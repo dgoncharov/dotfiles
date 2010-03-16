@@ -51,6 +51,7 @@ alias ls='ls --color=auto'
 alias cvs='colorcvs'
 alias screen='screen -U'
 alias ks='kstart konqueror'
+alias vim='vim -N'
 
 alias si='svn info'
 alias svs='svn st | grep -v "\?" | egrep -v "!"'
