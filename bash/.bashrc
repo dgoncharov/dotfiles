@@ -16,7 +16,7 @@ fi
 export PATH=/usr/lib64/ccache/bin:$PATH:$HOME/bin:/usr/local/wss/bin
 export CONFIG_SITE=/usr/local/etc/config.site
 export GTK_USE_XFT=1
-export EDITOR=vi
+export EDITOR=/usr/bin/vim
 export GREP_COLOR=35
 export BLOCK_SIZE=human-readable
 export LESSCHARSET=utf-8
