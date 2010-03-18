@@ -34,6 +34,10 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 
 set guifont=Terminus\ 11
 
+" Cursor shape in kde4 konsole.
+let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 "highlight Normal ctermbg=black guibg=black ctermfg=white guifg=white
 "highlight Cursor ctermfg=black guifg=black
 "highlight lCursor guibg=Cyan guifg=NONE
@@ -78,7 +82,6 @@ hi Search       guifg=red guibg=black ctermfg=red ctermbg=black
 "hi DiffText cterm=bold ctermbg=red gui=bold guibg=Red
 
 hi Cursor   guifg=white ctermfg=white
-hi lCursor  guifg=black guibg=darkgrey  ctermfg=black
 
 hi Comment  guifg=darkgrey ctermfg=darkgrey
 hi Constant ctermfg=brown guifg=brown cterm=none
