@@ -43,15 +43,13 @@ alias du1='du -h --max-depth=1 -P'
 alias make='make-wrapper'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
-alias cppgrep='grep --color=auto --include=*.cc --include=*.hh --include=*.hpp'
 alias d='dict -h dict.org'
-alias p='ps xa | grep -v grep | grep '
 alias ll='ls -la --color=auto'
 alias ls='ls --color=auto'
 alias cvs='colorcvs'
 alias screen='screen -U'
-alias ks='kstart konqueror'
 alias vim='vim -N'
+alias mplayer='mplayer -vo x11 -fs -zoom -idx'
 
 alias si='svn info'
 alias svs='svn st | grep -v "\?" | egrep -v "!"'
@@ -77,7 +75,10 @@ shopt -s extglob
 shopt -s dotglob
 shopt -s cmdhist
 shopt -s no_empty_cmd_completion
-ulimit -n 8192
+if [ `id -u` = "0" -o `id -g` = "0" ]
+then
+    ulimit -n 8192
+fi
 ulimit -c unlimited
 
 # Midnight Commander chdir enhancement
