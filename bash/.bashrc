@@ -107,7 +107,9 @@ function set_konsole_tab_name()
                 if test "/" = "$tmp"; then
                     dn="$cd"
                 else
-                    dn=".../`basename $dn`/`basename $cd`"
+                    local b=`basename "$dn"`
+                    local d=`basename "$cd"`
+                    dn=".../$b/$d"
                 fi
             fi
             dcop $KONSOLE_DCOP_SESSION 'renameSession(QString)' "$dn"
