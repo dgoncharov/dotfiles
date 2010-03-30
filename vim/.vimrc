@@ -26,6 +26,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+au BufRead,BufNewFile *.py setl noexpandtab shiftwidth=4 tabstop=4
+
 set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8
 
 " Suffixes that get lower priority when doing tab completion for filenames.
