@@ -26,6 +26,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+au BufRead,BufNewFile *.py setl noexpandtab shiftwidth=4 tabstop=4
+
 set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8
 
 " Suffixes that get lower priority when doing tab completion for filenames.
@@ -63,7 +65,7 @@ hi Normal guifg=white guibg=black ctermfg=white ctermbg=black
 hi Visual       guifg=grey guibg=black gui=reverse ctermfg=grey ctermbg=black cterm=reverse
 "hi VisualNOS    guifg=#8080ff guibg=fg      gui=reverse,underline   ctermfg=lightblue ctermbg=fg cterm=reverse,underline
 "hi Todo         guifg=#d14a14 guibg=#1248d1                     ctermfg=red ctermbg=darkblue
-hi Search       guifg=red guibg=black ctermfg=red ctermbg=black
+hi Search       guifg=yellow guibg=black ctermfg=yellow ctermbg=black
 "hi IncSearch    guifg=#b0ffff guibg=#2050d0                         ctermfg=darkblue ctermbg=gray
 
 "hi SpecialKey       guifg=cyan          ctermfg=darkcyan
@@ -108,4 +110,12 @@ hi type     ctermfg=cyan guifg=cyan gui=none cterm=none
 " hi PmenuThumb guifg=#c0c0c0
 
 syntax enable
+
+map <Tab> :bnext<cr>
+map <C-l> :ls<cr>
+map <C-e> :e .<cr>
+map <C-s> :up<cr>
+
+
+
 
