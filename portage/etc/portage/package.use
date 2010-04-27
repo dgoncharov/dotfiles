@@ -1,0 +1,51 @@
+app-doc/doxygen doc
+app-editors/emacs gzip-el spell tiff
+app-editors/gvim gtk
+app-misc/mc -samba -ncurses nls
+app-misc/screen multiuser
+app-portage/layman subversion git
+app-text/tetex doc
+app-text/texlive -luatex
+
+dev-lang/erlang doc kpoll hipe
+dev-lang/python xml
+dev-java/sun-jre-bin nsplugin
+dev-libs/boost debug doc icu bjam python
+=dev-libs/boost-1.39.0 debug doc icu bjam python
+dev-libs/libxml2 doc
+dev-scheme/guile deprecated discouraged
+dev-vcs/git subversion
+
+media-gfx/graphviz gtk pango
+media-libs/a52dec djbfft
+media-libs/gd fontconfig
+media-libs/mesa nptl
+media-libs/win32codecs real
+media-sound/amarok -mysql mp4
+media-sound/alsa-utils -midi
+#media-video/mplayer enca real
+media-video/mplayer enca
+
+media-gfx/graphviz gtk pango
+
+net-analyzer/trafshow -slang
+net-analyzer/wireshark gtk
+net-dns/dnsmasq resolvconf
+net-misc/curl gnutls
+net-misc/ntp caps
+>=net-misc/openssh-4.6_p1 -ldap
+
+sys-apps/hal dmi -pam_console
+# HAL don't like `zlib` here ;()
+sys-apps/initng-ifiles net runlevels vim fixes
+sys-apps/pciutils -zlib
+sys-devel/gdb doc expat 
+sys-devel/gcc doc
+sys-libs/glibc userlocales glibc-omitfp
+x11-base/xorg-server hal -evdev
+x11-misc/xscreensaver insecure-savers
+
+www-servers/apache mpm-worker doc debug
+
+sys-apps/groff -examples X
+
