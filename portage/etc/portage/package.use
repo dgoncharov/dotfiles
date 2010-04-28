@@ -41,6 +41,7 @@ sys-apps/initng-ifiles net runlevels vim fixes
 sys-apps/pciutils -zlib
 sys-devel/gdb doc expat 
 sys-devel/gcc doc
+sys-fs/udev extras
 sys-libs/glibc userlocales glibc-omitfp
 x11-base/xorg-server hal -evdev
 x11-misc/xscreensaver insecure-savers
