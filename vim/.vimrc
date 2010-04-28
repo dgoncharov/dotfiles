@@ -118,4 +118,5 @@ map <C-s> :up<cr>
 
 
 
+set tags=./tags,/root/work/spcommon/trunk/tags
 
