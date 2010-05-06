@@ -55,7 +55,7 @@ alias diff='colordiff'
 alias svn='colorsvn'
 alias si='svn info'
 alias svs='svn st | grep -v "\?" | egrep -v "!"'
-alias svd='svn di `svs | grep -v Makefile |cut -d " " -f 8`'
+alias svd='svn di --diff-cmd colordiff'
 alias svc='svn ci `svs |grep -v Makefile |cut -d " " -f 8`'
 
 alias cdi='cd /root/work/spserver/trunk/ivr'
