@@ -13,7 +13,7 @@ fi
 #
 [ -f /etc/profile ] && source /etc/profile
 
-export PATH=/usr/lib64/ccache/bin:$PATH:$HOME/bin:/usr/local/wss/bin
+export PATH=/usr/lib/colorgcc/bin:/usr/lib/ccache/bin:$PATH:$HOME/bin:/usr/local/wss/bin
 export CONFIG_SITE=/usr/local/etc/config.site
 export GTK_USE_XFT=1
 export EDITOR=/usr/bin/vim
@@ -40,7 +40,7 @@ export LANG='en_US.UTF-8'
 
 alias du0='du -h --max-depth=0 -P'
 alias du1='du -h --max-depth=1 -P'
-alias make='make-wrapper'
+#alias make='make-wrapper'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias d='dict -h dict.org'
