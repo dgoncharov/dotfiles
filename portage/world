@@ -162,3 +162,4 @@ media-sound/sox
 x11-terms/xterm
 dev-util/oprofile
 dev-util/colorgcc
+dev-vcs/colorsvn

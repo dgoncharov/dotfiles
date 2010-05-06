@@ -51,6 +51,7 @@ alias screen='screen -U'
 alias vim='vim -N'
 alias mplayer='mplayer -vo x11 -fs -zoom -idx'
 
+alias svn='colorsvn'
 alias si='svn info'
 alias svs='svn st | grep -v "\?" | egrep -v "!"'
 alias svd='svn di `svs | grep -v Makefile |cut -d " " -f 8`'
