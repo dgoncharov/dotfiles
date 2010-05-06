@@ -99,6 +99,18 @@ if [ -f /usr/share/mc/mc.gentoo ]; then
     . /usr/share/mc/mc.gentoo
 fi
 
+gdb_get_backtrace() {
+    local exe=$1
+    local core=$2
+
+    gdb ${exe} \
+        --core ${core} \
+        --batch \
+        --quiet \
+        -ex "thread apply all bt full" \
+        -ex "quit"
+}
+
 # This line was appended by KDE
 # Make sure our customised gtkrc file is loaded.
 # (This is no longer needed from version 0.8 of the theme engine)
