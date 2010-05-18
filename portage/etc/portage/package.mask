@@ -42,3 +42,11 @@
 =app-misc/mc-4.7.1
 =app-text/kchmviewer-3.1_p2-r1
 
+=dev-util/cmake-2.8.1-r1
+=dev-util/cmake-2.8.1
+=dev-libs/xmlrpc-c-1.18.02
+=dev-tex/luatex-0.60.0
+=x11-drivers/xf86-video-intel-2.11.0
+
+=x11-base/xorg-server-1.8.0
+=media-libs/libpng-1.4.2
