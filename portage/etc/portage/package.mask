@@ -50,3 +50,7 @@
 
 =x11-base/xorg-server-1.8.0
 =media-libs/libpng-1.4.2
+=sys-apps/grep-2.6
+=sys-apps/grep-2.6.1
+=sys-apps/grep-2.6.3
+
