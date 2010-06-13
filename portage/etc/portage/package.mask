@@ -38,7 +38,7 @@
 =media-gfx/sam2p-0.46
 =sys-process/lsof-4.83
 
-=x11-drivers/xf86-video-intel-2.10.0-r1
+#=x11-drivers/xf86-video-intel-2.10.0-r1
 =app-misc/mc-4.7.1
 =app-text/kchmviewer-3.1_p2-r1
 
@@ -46,11 +46,15 @@
 =dev-util/cmake-2.8.1
 =dev-libs/xmlrpc-c-1.18.02
 =dev-tex/luatex-0.60.0
-=x11-drivers/xf86-video-intel-2.11.0
+#=x11-drivers/xf86-video-intel-2.11.0
 
-=x11-base/xorg-server-1.8.0
+#=x11-base/xorg-server-1.8.0
 =media-libs/libpng-1.4.2
 =sys-apps/grep-2.6
 =sys-apps/grep-2.6.1
 =sys-apps/grep-2.6.3
 
+=media-libs/libpng-1.2.43-r3
+#=x11-base/xorg-server-1.8.1-r1
+
+=dev-util/cmake-2.8.1-r2
