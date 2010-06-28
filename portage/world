@@ -163,3 +163,6 @@ x11-terms/xterm
 dev-util/oprofile
 dev-util/colorgcc
 dev-vcs/colorsvn
+media-sound/g722tools
+media-sound/mpg123
+media-libs/libpng
