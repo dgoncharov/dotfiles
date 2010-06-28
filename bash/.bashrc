@@ -51,6 +51,7 @@ alias screen='screen -U'
 alias vim='vim -N'
 alias mplayer='mplayer -vo x11 -fs -zoom -idx'
 alias diff='colordiff'
+alias fdisk='fdisk -cu'
 
 alias svn='colorsvn'
 alias si='svn info'
@@ -79,8 +80,11 @@ resed()
         echo "Usage: `basename $0` where what replacement"
         return 1
     fi
+    echo "$1"
+    echo "$2"
+    echo "$3"
 
-    for i in `find . -type f -regex $1`; do echo $i; sed s/$2/$3/g -i $i; done
+    for i in `find . -type f -regex $1`; do echo $i; sed "s/$2/$3/g" -i $i; done
 }
 
 shopt -s cdspell
