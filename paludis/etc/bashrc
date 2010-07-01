@@ -10,7 +10,7 @@ CFLAGS="-march=native -minline-stringops-dynamically -O2 -pipe -ftree-vectorize 
 
 CXXFLAGS="${CFLAGS}"
 LDFLAGS="-Wl,-O1"
-#MAKEOPTS="-j4"
+MAKEOPTS="-j4"
 
 CCACHE_SIZE="4G"
 # CCACHE_DIR="/storage/tmp/ccache"
