@@ -84,7 +84,7 @@ resed()
     echo "$2"
     echo "$3"
 
-    for i in `find . -type f -regex $1`; do echo $i; sed "s/$2/$3/g" -i $i; done
+    for i in `find . -type f -regex $1`; do echo $i; sed 's/$2/$3/g' -i $i; done
 }
 
 shopt -s cdspell
