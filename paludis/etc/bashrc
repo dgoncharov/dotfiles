@@ -6,10 +6,10 @@
 #
 
 CHOST="x86_64-pc-linux-gnu"
-CFLAGS="-march=native -minline-stringops-dynamically -O2 -pipe -ftree-vectorize -falign-jumps=64 -falign-functions=64"
+CFLAGS="${CFLAGS} -march=native -minline-stringops-dynamically -O2 -pipe -ftree-vectorize -falign-jumps=64 -falign-functions=64"
 
 CXXFLAGS="${CFLAGS}"
-LDFLAGS="-Wl,-O1"
+LDFLAGS="${LDFLAGS} -Wl,-O1"
 MAKEOPTS="-j4"
 
 CCACHE_SIZE="4G"
