@@ -1,5 +1,8 @@
 set realname="Dmitry Goncharov"
-set from="dgoncharov@users.sf.net"
+set from=dgoncharov@users.sf.net
 set use_from=yes
 set use_envelope_from=yes
+
+set pop_host=pops://gonch.dmitry@pop.gmail.com
+set pop_delete=no
 
