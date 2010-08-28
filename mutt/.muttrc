@@ -3,8 +3,10 @@ set from=dgoncharov@users.sf.net
 set use_from=yes
 set use_envelope_from=yes
 
-set spoolfile=~/Mail/inbox
-set folder = ~/Mail
+set spoolfile=~/mail/inbox
+set folder=~/mail
+set record=+sent
+set postponed=+postponed
 
 set pop_host=pops://gonch.dmitry@pop.gmail.com
 set pop_delete=no
