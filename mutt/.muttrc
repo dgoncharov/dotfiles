@@ -10,6 +10,12 @@ set postponed=+postponed
 
 set pop_host=pops://gonch.dmitry@pop.gmail.com
 set pop_delete=no
+set delete=yes                          #delete without prompting
+set include=yes                         #quote msg in reply
+set fast_reply=yes                      #no prompting on reply
+set beep=no                             #no noise
+set markers=no                          #no + on wrapped lines
+set confirmappend=no                    #no prompt for save to =keep
 
 ignore *
 unignore from: date subject to cc bcc
@@ -17,7 +23,7 @@ unignore from: date subject to cc bcc
 color header yellow default "^.*$"
 color attachment blue default
 color quoted white default
-#color body white default "^[Oo]n.+wrote:$"
+color body white default "^[Oo]n.+wrote:$"
 
 set help=no
 
