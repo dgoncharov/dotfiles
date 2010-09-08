@@ -116,5 +116,5 @@ map <C-e> :e .<cr>
 map <C-s> :up<cr>
 
 
-
+set tags=$HOME/tags,./tags
 
