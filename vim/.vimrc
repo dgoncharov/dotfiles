@@ -111,12 +111,10 @@ hi type     ctermfg=cyan guifg=cyan gui=none cterm=none
 
 syntax enable
 
-map <Tab> :bnext<cr>
 map <C-l> :ls<cr>
 map <C-e> :e .<cr>
 map <C-s> :up<cr>
 
 
-
-set tags=./tags,/root/work/spcommon/trunk/tags
+set tags=$HOME/tags,./tags
 

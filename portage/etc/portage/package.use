@@ -16,6 +16,7 @@ dev-libs/libxml2 doc
 dev-scheme/guile deprecated discouraged
 dev-vcs/git subversion
 
+mail-client/mutt -berkdb -crypt -debug doc -gdbm -gnutls -gpg -idn imap mbox nls nntp pop -qdbm -sasl -sidebar smime smtp ssl -vanilla
 media-gfx/graphviz gtk pango
 media-libs/a52dec djbfft
 media-libs/gd fontconfig

@@ -37,6 +37,7 @@ export LC_TELEPHONE='ru_RU.UTF-8'
 export LC_MEASUREMENT='ru_RU.UTF-8'
 export LC_IDENTIFICATION='ru_RU.UTF-8'
 export LANG='en_US.UTF-8'
+export XAUTHORITY="$HOME/.Xauthority"
 
 alias du0='du -h --max-depth=0 -P'
 alias du1='du -h --max-depth=1 -P'
