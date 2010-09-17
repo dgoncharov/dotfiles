@@ -9,7 +9,7 @@ set record=+sent
 set postponed=+postponed
 
 set pop_host=pops://gonch.dmitry@pop.gmail.com
-set pop_delete=no
+set pop_delete=yes
 set delete=yes                          #delete without prompting
 set include=yes                         #quote msg in reply
 set fast_reply=yes                      #no prompting on reply
