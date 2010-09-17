@@ -16,7 +16,7 @@ CCACHE_SIZE="4G"
 # CCACHE_DIR="/storage/tmp/ccache"
 #PATH="/usr/lib/ccache/bin/:${PATH}"
 SANDBOX_WRITE="${SANDBOX_WRITE}:${CCACHE_DIR}"
-SKIP_FUNCTIONS="test"
+SKIP_FUNCTIONS=
 
 #ESVN_STORE_DIR="/storage/soft/gentoo/distfiles.scm/svn-src"
 #ECVS_TOP_DIR="/storage/soft/gentoo/distfiles.scm/cvs-src"
