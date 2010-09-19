@@ -15,6 +15,7 @@ dev-libs/boost debug doc icu bjam python
 dev-libs/libxml2 doc
 dev-scheme/guile deprecated discouraged
 dev-vcs/git subversion
+dev-vcs/subversion -webdav-neon -dso
 
 mail-client/mutt -berkdb -crypt -debug doc -gdbm -gnutls -gpg -idn imap mbox nls nntp pop -qdbm -sasl -sidebar smime smtp ssl -vanilla
 media-gfx/graphviz gtk pango
