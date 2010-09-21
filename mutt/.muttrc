@@ -5,13 +5,12 @@ set from=dgoncharov@users.sf.net
 set use_from=yes
 set use_envelope_from=yes
 
-set spoolfile=~/mail/inbox
-set folder=~/mail
+set folder=imaps://gonch.dmitry@imap.gmail.com:993
+set spoolfile="imaps://gonch.dmitry@imap.gmail.com/INBOX"
+set imap_keepalive=60
 set record=+sent
 set postponed=+postponed
 
-set pop_host=pops://gonch.dmitry@pop.gmail.com
-set pop_delete=yes
 set delete=yes                          #delete without prompting
 set include=yes                         #quote msg in reply
 set fast_reply=yes                      #no prompting on reply
