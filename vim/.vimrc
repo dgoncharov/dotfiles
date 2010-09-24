@@ -1,7 +1,5 @@
 " ~/.vimrc
 " \started 2008.06.15
-" \last modification 2010.03.16
-"
 
 set nocompatible
 set autoindent
@@ -117,4 +115,7 @@ map <C-s> :up<cr>
 
 
 set tags=$HOME/tags,./tags
+
+set exrc " enable per-directory .vimrc files
+set secure " disable unsafe commands in local .vimrc file
 
