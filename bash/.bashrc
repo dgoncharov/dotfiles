@@ -13,7 +13,8 @@ fi
 #
 [ -f /etc/profile ] && source /etc/profile
 
-export PATH=/usr/lib/colorgcc/bin:/usr/lib/ccache/bin:$PATH:$HOME/bin:/usr/local/wss/bin
+export TZ=America/New_York
+export PATH=/usr/lib/colorgcc/bin:$PATH:/sbin:/usr/sbin
 export CONFIG_SITE=/usr/local/etc/config.site
 export GTK_USE_XFT=1
 export EDITOR=/usr/bin/vim
@@ -21,7 +22,6 @@ export GREP_COLOR=35
 export BLOCK_SIZE=human-readable
 export LESS=-rf
 export LESSCHARSET=utf-8
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/wss/lib/pkgconfig
 export PALUDIS_OPTIONS="--log-level warning --dl-reinstall-scm weekly --show-reasons summary"
 export RECONCILIO_OPTIONS="--log-level warning"
 export LC_CTYPE='ru_RU.UTF-8'
@@ -41,7 +41,6 @@ export XAUTHORITY="$HOME/.Xauthority"
 
 alias du0='du -h --max-depth=0 -P'
 alias du1='du -h --max-depth=1 -P'
-#alias make='make-wrapper'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias d='dict -h dict.org'
@@ -68,6 +67,7 @@ alias cdb='cds; cd b2bua'
 alias untabify='for i in `find . -type f -regex ".*\.\(c\|h\|cc\|hh\|icc\|tcc\|hxx\|cpp\|hpp\|inl\|sh\)"`; do echo $i; sed -i "s/\t/    /g" $i; done'
 alias defg++='echo "main(){}" | g++ -E -x c++ -dM - '
 alias defgcc='echo "main(){}" | gcc -E -x c -dM - '
+alias teamviewer='/opt/teamviewer5/teamviewer'
 
 lsol ()
 {
