@@ -9,28 +9,32 @@ set backspace=indent,eol,start
 
 set showcmd
 set showmatch
-set statusline=%n%m\ %f\ %l/%L,%c-%v
+set statusline=%n%m\ %f\ %l/%L,%c
 set laststatus=2
-
-" backspace in Visual mode deletes selection
-vnoremap <BS> d
 
 " Switch on search pattern highlighting.
 set hlsearch
 set ignorecase
 set incsearch
+" Don't search from top after hitting the bottom of the file.
+set nows
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set textwidth=79
+
+au BufRead,BufNewFile *.mk setl noexpandtab shiftwidth=4 tabstop=4
+au BufRead,BufNewFile *akefile* setl noexpandtab shiftwidth=4 tabstop=4
 au BufRead,BufNewFile *.py setl noexpandtab shiftwidth=4 tabstop=4
 
 set encoding=utf-8 fileencoding=utf-8 termencoding=utf-8
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set suffixes+=.info,.log
+set wildignore+=*.bak,~,*.swp,*.o,*.aux,*.dvi,*.bbl,*.blg,*.brf,*.cb,*.ind,*.idx,*.ilg,*.inx,*.out,*.toc
 
 set guifont=Terminus\ 11
 
@@ -109,10 +113,8 @@ hi type     ctermfg=cyan guifg=cyan gui=none cterm=none
 
 syntax enable
 
-map <C-l> :ls<cr>
-map <C-e> :e .<cr>
-map <C-s> :up<cr>
-
+set wildmode=longest,list,full
+set wildmenu
 
 set tags=$HOME/tags,./tags
 
