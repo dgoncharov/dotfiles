@@ -14,6 +14,9 @@ $if Bash
 # Bind grep substring in C/C++ files to F4
 "\eOS": "\C-agrep -nr --include=*.{c,h,cc,hh,icc,tcc,hxx,cpp,hpp,py,ac,am,inl,mk} --exclude= \"\C-e\" *"
 
+# F5 inserts " | grep "
+"\e[15~": "\C-e | grep "
+
 # Bind grep substring in list of running processes to F7
 "\e[18~": "\C-aps -ef | grep -v grep | egrep "\C-e|PID\"\n"
 
