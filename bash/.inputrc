@@ -8,20 +8,14 @@ set visible-stats on
 
 $if Bash
 
-# Bind grep substring in all files to F3
-"\eOR": "\C-agrep -nir \"\C-e\" *"
+# Bind `cd ..` to F3
+"\eOR": "\C-a\C-kcd ..\n"
 
 # Bind grep substring in C/C++ files to F4
-"\eOS": "\C-agrep -nr --include=*.{c,h,cc,hh,icc,tcc,hxx,cpp,hpp,py,ac,am,inl} \"\C-e\" *"
+"\eOS": "\C-agrep -nr --include=*.{c,h,cc,hh,icc,tcc,hxx,cpp,hpp,py,ac,am,inl,mk} --exclude= \"\C-e\" *"
 
 # Bind grep substring in list of running processes to F7
-"\e[18~": "\C-aps ax | grep -v grep | grep "\C-e\"\n"
-
-# Bind search substring via dict F8
-"\e[19~": "\C-adict "\C-e\"\n"
-
-# Bind `cd ..` to Crtl-Up
-"\e[1;5A": "\C-a\C-kcd ..\n"
+"\e[18~": "\C-aps -ef | grep -v grep | egrep "\C-e|PID\"\n"
 
 $endif
 
