@@ -67,7 +67,7 @@ alias cdb='cds; cd b2bua'
 alias untabify='for i in `find . -type f -regex ".*\.\(c\|h\|cc\|hh\|icc\|tcc\|hxx\|cpp\|hpp\|inl\|sh\)"`; do echo $i; sed -i "s/\t/    /g" $i; done'
 alias defg++='echo "main(){}" | g++ -E -x c++ -dM - '
 alias defgcc='echo "main(){}" | gcc -E -x c -dM - '
-alias teamviewer='/opt/teamviewer5/teamviewer'
+alias teamviewer='/opt/teamviewer6/teamviewer'
 
 lsol ()
 {
