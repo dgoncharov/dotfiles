@@ -1,0 +1,13 @@
+modules=( "iproute2" )
+config_eth0=( "192.168.1.109/24" )
+routes_eth0=( "default via 192.168.1.1" )
+
+#dns_domain_eth0="unison.local"
+#dns_servers_eth0="188.227.5.2 10.10.16.100 67.217.108.199 78.111.83.131 69.160.248.130"
+dns_servers_eth0="209.18.47.61 209.18.47.62"
+#dns_search_eth0="unison.local unisonproject.com"
+dns_options_eth0=( "timeout 1" )
+
+ntp_servers_eth0=( "0.us.pool.ntp.org 1.us.pool.ntp.org 2.us.pool.ntp.org" )
+
+
