@@ -68,16 +68,14 @@ lsol ()
 
 resed()
 {
-    if [ $# -ne 3 ]
-    then
-        echo "Usage: `basename $0` where what replacement"
+    if [ $# -ne 3 ]; then
+        echo "Usage: `basename $0` what replacement where"
         return 1
     fi
-    echo "$1"
-    echo "$2"
-    echo "$3"
-
-    for i in `find . -type f -regex $1`; do echo $i; sed 's/$2/$3/g' -i $i; done
+    for f in `find . -type f -regex "${3}"`; do
+        echo "${f}"
+        sed "s:${1}:${2}:g" -i "${f}"
+    done
 }
 
 shopt -s cdspell
