@@ -11,7 +11,7 @@ fi
 
 export SHELL="/bin/bash"
 export TZ=America/New_York
-export PATH=/usr/lib/colorgcc/bin:$PATH:/sbin:/usr/sbin
+export PATH=/usr/lib/colorgcc/bin:$PATH:/sbin:/usr/sbin:/opt/intel/Compiler/11.1/072/bin/intel64
 export CONFIG_SITE=/usr/local/etc/config.site
 export GTK_USE_XFT=1
 export EDITOR=vim
@@ -106,6 +106,16 @@ gdb_get_backtrace() {
         --quiet \
         -ex "thread apply all bt full" \
         -ex "quit"
+}
+
+d2h()
+{
+    bc <<< "obase=16; $1"
+}
+
+h2d()
+{
+    bc <<< "ibase=16; $1"
 }
 
 # Some konsole magic
