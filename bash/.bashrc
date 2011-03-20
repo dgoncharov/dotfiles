@@ -11,7 +11,11 @@ fi
 
 export SHELL="/bin/bash"
 export TZ=America/New_York
-export PATH=/usr/lib/colorgcc/bin:$PATH:/sbin:/usr/sbin:/opt/intel/Compiler/11.1/072/bin/intel64
+PATH=/usr/lib/colorgcc/bin:${PATH}:/sbin:/usr/sbin
+PATH=${PATH/::/:}
+PATH=${PATH/#:/}
+PATH=${PATH/%:/}
+export PATH
 export CONFIG_SITE=/usr/local/etc/config.site
 export GTK_USE_XFT=1
 export EDITOR=vim
