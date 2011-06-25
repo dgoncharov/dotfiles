@@ -1,7 +1,84 @@
-modules=( "iproute2" )
-config_eth0=( "192.168.1.109/24" )
-routes_eth0=( "default via 192.168.1.1" )
-dns_servers_eth0="209.18.47.61 209.18.47.62"
-dns_options_eth0=( "timeout 1" )
-ntp_servers_eth0=( "0.us.pool.ntp.org 1.us.pool.ntp.org 2.us.pool.ntp.org" )
+modules="iwconfig"
+
+# Configure WEP keys for Access Points called ESSID1 and ESSID2
+# You may configure up to 4 WEP keys, but only 1 can be active at
+# any time so we supply a default index of [1] to set key [1] and then
+# again afterwards to change the active key to [1]
+# We do this incase you define other ESSID's to use WEP keys other than 1
+#
+# Prefixing the key with s: means it's an ASCII key, otherwise a HEX key
+#
+# enc open specified open security (most secure)
+# enc restricted specified restricted security (least secure)
+#key_ESSID1="[1] s:yourkeyhere key [1] enc open"
+#key_ESSID2="[1] aaaa-bbbb-cccc-dd key [1] enc restricted"
+#essid_europe="europe"
+#essid_wlan0="europe"
+#key_europe="s:black enc open"
+config_wlan0="192.168.1.100/24"
+routes_wlan0="default via 192.168.1.1"
+dns_servers_wlan0="167.206.251.129 167.206.251.130"
+dns_options_wlan0="timeout 1"
+ntp_servers_wlan0="0.us.pool.ntp.org 1.us.pool.ntp.org 3.us.pool.ntp.org"
+
+postup()
+{
+    /sbin/ifconfig wlan0 up
+    /usr/sbin/iw --debug wlan0 connect -w europe key 0:*****
+}
+
+predown()
+{
+    /usr/sbin/iw wlan0 disconnect
+}
+
+#config_eth0="dhcp"
+
+#modules="iproute2"
+##config_eth0="74.88.194.139/20"
+##routes_eth0="default via 74.88.192.1"
+#config_eth0="192.168.1.100/24"
+#routes_eth0="default via 192.168.1.1"
+#dns_servers_eth0="167.206.251.129 167.206.251.130"
+#dns_options_eth0="timeout 1"
+#ntp_servers_eth0="0.us.pool.ntp.org 1.us.pool.ntp.org 3.us.pool.ntp.org"
+
+#modules="iwconfig"
+#modules="wpa_supplicant"
+#wpa_supplicant_wlan0="-Dath9k_htc"
+
+# Configure WEP keys for Access Points called ESSID1 and ESSID2
+# You may configure up to 4 WEP keys, but only 1 can be active at
+# any time so we supply a default index of [1] to set key [1] and then
+# again afterwards to change the active key to [1]
+# We do this incase you define other ESSID's to use WEP keys other than 1
+#
+# Prefixing the key with s: means it's an ASCII key, otherwise a HEX key
+#
+# enc open specified open security (most secure)
+# enc restricted specified restricted security (least secure)
+#key_ESSID1="[1] s:yourkeyhere key [1] enc open"
+#key_ESSID2="[1] aaaa-bbbb-cccc-dd key [1] enc restricted"
+#essid_europe="europe"
+#essid_wlan0="europe"
+#key_europe="s:black enc open"
+#config_wlan0="192.168.1.100/24"
+#routes_wlan0="default via 192.168.1.1"
+#dns_servers_wlan0="167.206.251.129 167.206.251.130"
+#dns_options_wlan0="timeout 1"
+#ntp_servers_wlan0="0.us.pool.ntp.org 1.us.pool.ntp.org 3.us.pool.ntp.org"
+
+#
+## The below only work when we scan for available Access Points
+#
+## Sometimes more than one Access Point is visible so we need to
+## define a preferred order to connect in
+##preferred_aps=( "ESSID1" "ESSID2" )
+#
+#config_europe="192.168.1.100/24"
+#routes_europe="default via 192.168.1.1"
+#dns_servers_europe="167.206.251.129 167.206.251.130"
+#dns_options_europe="timeout 1"
+#ntp_servers_europe="0.us.pool.ntp.org 1.us.pool.ntp.org 3.us.pool.ntp.org"
+
 
