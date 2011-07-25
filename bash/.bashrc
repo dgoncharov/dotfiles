@@ -70,13 +70,13 @@ lsol ()
     lsof -p $1 | grep lib | awk '{ print $9 }' | sort
 }
 
-resed()
+rsed()
 {
     if [ $# -ne 3 ]; then
         echo "Usage: `basename $0` what replacement where"
         return 1
     fi
-    for f in `find . -type f -regex "${3}"`; do
+    for f in $(find . -type f -regex "${3}"); do
         echo "${f}"
         sed "s:${1}:${2}:g" -i "${f}"
     done
