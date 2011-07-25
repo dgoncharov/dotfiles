@@ -6,7 +6,7 @@
 #
 
 CHOST="x86_64-pc-linux-gnu"
-CFLAGS="${CFLAGS} -march=native -minline-stringops-dynamically -O2 -pipe -ftree-vectorize -falign-jumps=64 -falign-functions=64"
+CFLAGS="${CFLAGS} -march=amdfam10 -minline-stringops-dynamically -O2 -pipe -ftree-vectorize -falign-jumps=64 -falign-functions=64"
 
 CXXFLAGS="${CFLAGS}"
 LDFLAGS="${LDFLAGS} -Wl,-O1"
