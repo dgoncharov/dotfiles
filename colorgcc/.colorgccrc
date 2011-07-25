@@ -28,6 +28,8 @@
 ##gcc: /usr/bin/gcc
 ##c++: /usr/bin/c++
 ##cc:  /usr/bin/cc
+#icc: /opt/intel/Compiler/11.1/072/bin/intel64/icc
+#icpc: /opt/intel/Compiler/11.1/072/bin/intel64/icpc
 
 # Don't do color if our terminal type ($TERM) is one of these.
 # (List all terminal types on one line, seperated by whitespace.)
@@ -39,7 +41,7 @@ introFileNameColor: cyan
 introMessageColor: cyan
 
 # Text other than a warning or error.
-introColor: reset
+introColor: cyan
 
 # Warnings and errors both have similar formats:
 #    filename:999:Message
