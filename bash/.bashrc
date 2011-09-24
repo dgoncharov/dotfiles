@@ -46,8 +46,8 @@ export XAUTHORITY="$HOME/.Xauthority"
 alias du0='du -h --max-depth=0 -P'
 alias du1='du -h --max-depth=1 -P'
 alias d='dict -h dict.org'
-alias ll='ls -la --color=auto'
 alias ls='ls --color=auto'
+alias ll='ls -lA'
 alias cvs='colorcvs'
 alias screen='screen -U'
 alias vim='vim -N'
@@ -65,7 +65,7 @@ alias defg++='echo "main(){}" | g++ -E -x c++ -dM - '
 alias defgcc='echo "main(){}" | gcc -E -x c -dM - '
 alias teamviewer='/opt/teamviewer6/teamviewer'
 
-lsol ()
+lsol()
 {
     lsof -p $1 | grep lib | awk '{ print $9 }' | sort
 }
@@ -73,7 +73,7 @@ lsol ()
 rsed()
 {
     if [ $# -ne 3 ]; then
-        echo "Usage: `basename $0` what replacement where"
+        echo "Usage: `basename $0` <what> <replacement> <where>"
         return 1
     fi
     for f in $(find . -type f -regex "${3}"); do
@@ -92,11 +92,6 @@ then
     ulimit -n 8192
 fi
 ulimit -c unlimited
-
-# Midnight Commander chdir enhancement
-if [ -f /usr/share/mc/mc.gentoo ]; then
-    . /usr/share/mc/mc.gentoo
-fi
 
 gdb_get_backtrace() {
     local exe=$1
@@ -117,8 +112,26 @@ d2h()
 
 h2d()
 {
-    bc <<< "ibase=16; $1"
+    v=$(tr '[:lower:]' '[:upper:]' <<< $1)
+    bc <<< "ibase=16; $v"
+
 }
+
+f2c()
+{
+    let t=$1-32
+    let t=$t*5/9
+    echo $t
+}
+
+c2f()
+{
+    let t=$1*9/5
+    let t=$t+32
+    echo $t
+}
+
+export defgcc  lsol rsed d2h h2d f2c c2f
 
 # Some konsole magic
 function set_konsole_tab_name()
