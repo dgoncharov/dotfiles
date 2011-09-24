@@ -57,3 +57,7 @@ errorFileNameColor: red
 errorNumberColor:   red
 errorMessageColor:  red
 
+noteFileNameColor: green
+noteNumberColor: green
+noteMessageColor: green
+
