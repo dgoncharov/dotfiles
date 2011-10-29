@@ -53,7 +53,6 @@ alias screen='screen -U'
 alias vim='vim -N'
 alias mplayer='mplayer -vo x11 -fs -zoom -idx'
 alias diff='colordiff'
-alias fdisk='fdisk -cu'
 
 alias svn='colorsvn'
 alias si='svn info'
