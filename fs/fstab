@@ -17,8 +17,9 @@
 /dev/sda1   /boot         reiserfs    defaults,noatime,notail        1 2
 /dev/sda2   none          swap        sw                             0 0
 /dev/sda3   /             reiserfs    noatime                        0 1
-/dev/cardreader /misc/cardreader vfat ro,noatime,user                0 0
-/dev/usb   /misc/usb      vfat        ro,noatime,user,utf8           0 0
+/dev/cardreader /misc/cardreader auto noatime,user                   0 0
+/dev/usb1   /misc/usb1    auto        noatime,user,utf8              0 0
+/dev/usb2   /misc/usb2    auto        noatime,user,utf8              0 0
 
 # NOTE: The next line is critical for boot!
 proc                    /proc           proc            defaults        0 0

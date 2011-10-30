@@ -1,4 +1,4 @@
 # Kingston card reader.
 SUBSISTEM=="usb", ATTRS{serial}=="113902001109", SYMLINK+="cardreader", RUN+="/bin/mount /dev/cardreader"
-SUBSISTEM=="usb", DRIVERS=="usb", SYMLINK+="usb", RUN+="/bin/mount /dev/usb"
+SUBSISTEM=="usb", DRIVERS=="usb", SYMLINK+="usb%n", RUN+="/bin/mount /dev/usb%n"
 
