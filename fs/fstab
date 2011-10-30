@@ -14,18 +14,16 @@
 # <fs>                  <mountpoint>    <type>          <opts>          <dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-/dev/sda1   /boot         reiserfs    defaults,noatime,notail        1 2
-/dev/sda2   none          swap        sw                             0 0
-/dev/sda3   /             reiserfs    noatime                        0 1
-/dev/cardreader /misc/cardreader auto noatime,user                   0 0
-/dev/usb1   /misc/usb1    auto        noatime,user,utf8              0 0
-/dev/usb2   /misc/usb2    auto        noatime,user,utf8              0 0
+/dev/sda1    /boot       reiserfs  defaults,noatime,notail     1 2
+/dev/sda2    none        swap      sw                          0 0
+/dev/sda3    /           reiserfs  noatime                     0 1
 
 # NOTE: The next line is critical for boot!
-proc                    /proc           proc            defaults        0 0
+proc         /proc       proc      defaults                    0 0
 
 # glibc 2.2 and above expects tmpfs to be mounted at /dev/shm for 
 # POSIX shared memory (shm_open, shm_unlink).
 # (tmpfs is a dynamically expandable/shrinkable ramdisk, and will
 #  use almost no memory if not populated with files)
-shm                     /dev/shm        tmpfs           nodev,nosuid,noexec     0 0
+shm          /dev/shm    tmpfs     nodev,nosuid,noexec      0 0
+
