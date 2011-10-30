@@ -130,6 +130,11 @@ c2f()
     echo $t
 }
 
+devinfo()
+{
+    udevadm info -a -p $(udevadm info -q path -n $1)
+}
+
 export defgcc  lsol rsed d2h h2d f2c c2f
 
 # Some konsole magic
