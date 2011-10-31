@@ -1,0 +1,20 @@
+#
+# This is an automounter map and it has the following format
+# key [ -mount-options-separated-by-comma ] location
+# Details may be found in the autofs(5) manpage
+
+cdrom	      -fstype=iso9660,ro,nosuid,nodev	                   :/dev/cdrom
+kingston      -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/kingston
+corsair       -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/corsair
+kronverk      -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/kronverk
+wdusbdrive    -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/wdusbdrive
+
+# the following entries are samples to pique your imagination
+#linux		-ro,soft,intr		ftp.example.org:/pub/linux
+#boot		-fstype=ext2		:/dev/hda1
+#floppy		-fstype=auto		:/dev/fd0
+#floppy		-fstype=ext2		:/dev/fd0
+#e2floppy	-fstype=ext2		:/dev/fd0
+#jaz		-fstype=ext2		:/dev/sdc1
+#removable	-fstype=ext2		:/dev/hdd
+
