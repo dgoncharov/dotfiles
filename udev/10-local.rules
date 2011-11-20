@@ -1,4 +1,4 @@
-SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{serial}=="113902001109", SYMLINK+="kingston"
+SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{serial}=="113902001109", SYMLINK+="kingston", RUN+="/home/dgoncharov/bin/mvphoto.sh /dev/kingston"
 SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{serial}=="A400000000045841", SYMLINK+="corsair"
 SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{serial}=="A2E095709", SYMLINK+="kronverk"
 SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{serial}=="57442D575842314132304537363039", SYMLINK+="wdusbdrive"
