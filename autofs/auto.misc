@@ -3,11 +3,11 @@
 # key [ -mount-options-separated-by-comma ] location
 # Details may be found in the autofs(5) manpage
 
-cdrom	      -fstype=iso9660,ro,nosuid,nodev	                   :/dev/cdrom
-kingston      -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/kingston
-corsair       -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/corsair
-kronverk      -fstype=auto,noatime,user,utf8,gid=1016,umask=0002   :/dev/kronverk
-wdusbdrive    -fstype=ntfs-3g,noatime,user,utf8,gid=1016,umask=0002   :/dev/wdusbdrive
+cdrom       -fstype=iso9660,ro,nosuid,nodev                        :/dev/cdrom
+kingston    -fstype=auto,noatime,user,utf8,gid=1016,umask=0002     :/dev/kingston
+corsair     -fstype=auto,noatime,user,utf8,gid=1016,umask=0002     :/dev/corsair
+kronverk    -fstype=auto,noatime,user,utf8,gid=1016,umask=0002     :/dev/kronverk
+wdusbdrive  -fstype=ntfs-3g,noatime,user,utf8,gid=1016,umask=0002  :/dev/wdusbdrive
 
 # the following entries are samples to pique your imagination
 #linux		-ro,soft,intr		ftp.example.org:/pub/linux
