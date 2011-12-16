@@ -17,6 +17,7 @@ set fast_reply=yes                      #no prompting on reply
 set beep=no                             #no noise
 set markers=no                          #no + on wrapped lines
 set confirmappend=no                    #no prompt for save to =keep
+set header_cache=~/.mutt/psych0tik.hcache
 
 ignore *
 unignore from: date subject to cc bcc
