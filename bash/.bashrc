@@ -63,6 +63,7 @@ alias svc='svn ci `svs |grep -v Makefile |cut -d " " -f 8`'
 alias defg++='echo "main(){}" | g++ -E -x c++ -dM - '
 alias defgcc='echo "main(){}" | gcc -E -x c -dM - '
 alias teamviewer='/opt/teamviewer6/teamviewer'
+alias cal='cal -m'
 
 lsol()
 {
@@ -140,7 +141,7 @@ ts()
     sudo tail -f /var/log/everything/current
 }
 
-export defgcc  lsol rsed d2h h2d f2c c2f
+export defgcc lsol rsed d2h h2d f2c c2f
 
 # Some konsole magic
 function set_konsole_tab_name()
