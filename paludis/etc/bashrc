@@ -1,12 +1,10 @@
 #!/bin/bash
 #
-# $Id$
-#
 # Configure environment for paludis
-#
 
 CHOST="x86_64-pc-linux-gnu"
-CFLAGS="${CFLAGS} -march=amdfam10 -minline-stringops-dynamically -O2 -pipe -ftree-vectorize -falign-jumps=64 -falign-functions=64"
+CFLAGS="${CFLAGS} -march=amdfam10 -minline-stringops-dynamically -O2 -pipe\
+    -ftree-vectorize -falign-jumps=64 -fomit-frame-pointer"
 
 CXXFLAGS="${CFLAGS}"
 LDFLAGS="${LDFLAGS} -Wl,-O1 -Wl,--hash-style=gnu"
@@ -17,21 +15,3 @@ MAKEOPTS="-j8"
 #PATH="/usr/lib/ccache/bin/:${PATH}"
 #SANDBOX_WRITE="${SANDBOX_WRITE}:${CCACHE_DIR}"
 SKIP_FUNCTIONS=
-
-#ESVN_STORE_DIR="/storage/soft/gentoo/distfiles.scm/svn-src"
-#ECVS_TOP_DIR="/storage/soft/gentoo/distfiles.scm/cvs-src"
-#EGIT_STORE_DIR="/storage/soft/gentoo/distfiles.scm/git-src"
-#ETLA_TOP_DIR="/storage/soft/gentoo/distfiles.scm/tla-src"
-
-# Switch compiler for broken ebuilds
-#case "${P}" in
-#     digikam-0.9.4_beta5|qt-4.3.3|xorg-server-1.4.2)
-#	ewarn "${P} is known as gcc 4.3.x not compatible!"
-#	ewarn "Switch compiler to gcc 4.2.1"
-#	export CC=x86_64-pc-linux-gnu-gcc-4.2.1
-#	export CPP=x86_64-pc-linux-gnu-cpp-4.2.1
-#	export CXX=x86_64-pc-linux-gnu-g++-4.2.1
-#	export CFLAGS=`echo ${CPPFLAGS} | sed 's,-minline-stringops-dynamically,,'`
-#	export CXXFLAGS="${CFLAGS}"
-#	;;
-#esac
