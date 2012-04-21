@@ -24,8 +24,11 @@ set shiftwidth=4
 set expandtab
 
 set textwidth=79
+set nofoldenable
 
 au BufRead,BufNewFile *.mk setl noexpandtab shiftwidth=4 tabstop=4
+au BufRead,BufNewFile *.am setl noexpandtab shiftwidth=4 tabstop=4
+au BufRead,BufNewFile *.in setl noexpandtab shiftwidth=4 tabstop=4
 au BufRead,BufNewFile *akefile* setl noexpandtab shiftwidth=4 tabstop=4
 au BufRead,BufNewFile *.py setl noexpandtab shiftwidth=4 tabstop=4
 
